@@ -7675,9 +7675,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetection.Consumer.csproj",
-      "projectName": "ServiceBusDuplicateDetection.Consumer",
-      "projectPath": "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetection.Consumer.csproj",
+      "projectUniqueName": "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetectionConsumer.csproj",
+      "projectName": "ServiceBusDuplicateDetectionConsumer",
+      "projectPath": "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetectionConsumer.csproj",
       "packagesPath": "/Users/shahab/.nuget/packages/",
       "outputPath": "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetection.Console/obj/",
       "projectStyle": "PackageReference",

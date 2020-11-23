@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ServiceBusDuplicateDetection.Consumer.Components
+namespace ServiceBusDuplicateDetectionConsumer.Components
 {
     // ReSharper disable once InconsistentNaming
     public interface CustomerChanged

@@ -24,22 +24,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="298e0ca5-c863-4f9f-abdd-dd1457890ae1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ServiceBusDuplicateDetectionSample/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ServiceBusDuplicateDetectionSample/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ServiceBusDuplicateDetectionSample/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ServiceBusDuplicateDetectionSample/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ServiceBusDuplicateDetectionSample/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ServiceBusDuplicateDetectionSample/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ServiceBusDuplicateDetectionSample/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetection.Consumer.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServiceBusDuplicateDetectionSample.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceBusDuplicateDetectionSample.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning/MyStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning/MyStack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Components/CustomerChanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Components/CustomerChanged.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Consumers/CustomerChangedConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Consumers/CustomerChangedConsumer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetection.ConsoleSample.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetection.Consumer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetectionConsumer.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +56,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Components/CustomerChanged.cs" />
         <option value="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetection.ConsoleSample.csproj" />
-        <option value="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Program.cs" />
         <option value="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Consumers/CustomerChangedConsumer.cs" />
+        <option value="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Program.cs" />
       </list>
     </option>
   </component>
@@ -91,6 +80,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager" selected=".NET Project.ServiceBusDuplicateDetection.ConsoleSample">
@@ -102,7 +92,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetection.Consumer.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetectionConsumer.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -139,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606147866576</updated>
-      <workItem from="1606147941457" duration="5094000" />
+      <workItem from="1606147941457" duration="5237000" />
     </task>
     <servers />
   </component>
@@ -260,10 +250,10 @@
           <line>15</line>
           <properties documentPath="$PROJECT_DIR$/src/ServiceBusDuplicateDetection.Console/Consumers/CustomerChangedConsumer.cs" initialLine="17">
             <startOffsets>
-              <option value="459" />
+              <option value="457" />
             </startOffsets>
             <endOffsets>
-              <option value="470" />
+              <option value="468" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

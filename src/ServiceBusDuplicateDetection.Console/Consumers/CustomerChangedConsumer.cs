@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using MassTransit;
 using MassTransit.ConsumeConfigurators;
 using MassTransit.Definition;
-using ServiceBusDuplicateDetection.Consumer.Components;
+using ServiceBusDuplicateDetectionConsumer.Components;
 
-namespace ServiceBusDuplicateDetection.Consumer.Consumers
+namespace ServiceBusDuplicateDetectionConsumer.Consumers
 {
     public class CustomerChangedConsumer : IConsumer<CustomerChanged>
     {

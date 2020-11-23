@@ -3,10 +3,10 @@ using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using ServiceBusDuplicateDetection.Consumer.Components;
-using ServiceBusDuplicateDetection.Consumer.Consumers;
+using ServiceBusDuplicateDetectionConsumer.Components;
+using ServiceBusDuplicateDetectionConsumer.Consumers;
 
-namespace ServiceBusDuplicateDetection.Consumer
+namespace ServiceBusDuplicateDetectionConsumer
 {
     internal class Program
     {
