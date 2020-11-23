@@ -15,8 +15,12 @@ namespace ServiceBusDuplicateDetectionConsumer.Consumers
         {
             var messageId = context.Headers.Get<string>("MessageId");
             _counter++;
-            Console.WriteLine($"        Header MessageId:         {messageId}");
+            
             Console.WriteLine($"        MessageId:                {context.MessageId}");
+            Console.WriteLine($"        Header MessageId:         {messageId}");
+            Console.WriteLine($"        SessionId:                {context.SessionId()}");
+            Console.WriteLine($"        PartitionKey:             {context.PartitionKey()}");
+            Console.WriteLine($"================================================================");
             return Task.CompletedTask;
         }
     }
