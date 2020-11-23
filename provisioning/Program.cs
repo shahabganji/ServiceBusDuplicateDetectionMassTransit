@@ -1,7 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Pulumi;
 
-class Program
+namespace ServiceBusDuplicateDetection.Provisioning
 {
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+    internal class Program
+    {
+        private static Task<int> Main() => Deployment.RunAsync<MyStack>();
+    }
 }
