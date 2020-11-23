@@ -3,7 +3,7 @@ using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using ServiceBusDuplicateDetectionConsumer.Components;
+using ServiceBusDuplicateDetectionComponents;
 using ServiceBusDuplicateDetectionConsumer.Consumers;
 
 namespace ServiceBusDuplicateDetectionConsumer

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TmmtvWkUAwlpurWJXoTf9F9rSZBk+ULsHQJa1BTEQ1ex+YW3/uj+xoHQ9t8Qw4MviCEebNu9J3vC8PbDHWy5tw==",
+  "dgSpecHash": "IfNT20SzoBNvoBm6aviegyQGujSL15Gun7YYPnrW3LBjTNT7eYdworq1/KhQyI33ppLhVjknA9JZ5bP/u+1TZQ==",
   "success": true,
   "projectFilePath": "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetection.Console/ServiceBusDuplicateDetectionConsumer.csproj",
   "expectedPackageFiles": [

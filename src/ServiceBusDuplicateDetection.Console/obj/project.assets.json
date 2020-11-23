@@ -2372,6 +2372,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ServiceBusDuplicateDetectionComponents/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ServiceBusDuplicateDetectionComponents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServiceBusDuplicateDetectionComponents.dll": {}
+        }
       }
     }
   },
@@ -7652,6 +7662,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ServiceBusDuplicateDetectionComponents/1.0.0": {
+      "type": "project",
+      "path": "../ServiceBusDuplicateDetectionComponents/ServiceBusDuplicateDetectionComponents.csproj",
+      "msbuildProject": "../ServiceBusDuplicateDetectionComponents/ServiceBusDuplicateDetectionComponents.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7665,7 +7680,8 @@
       "Serilog.Extensions.Hosting >= 3.1.0",
       "Serilog.Settings.Configuration >= 3.1.0",
       "Serilog.Sinks.Console >= 3.1.1",
-      "Serilog.Sinks.Seq >= 4.0.0"
+      "Serilog.Sinks.Seq >= 4.0.0",
+      "ServiceBusDuplicateDetectionComponents >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7696,7 +7712,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetectionComponents/ServiceBusDuplicateDetectionComponents.csproj": {
+              "projectPath": "/Users/shahab/dev/playground/ServiceBusDuplicateDetectionMassTransit/src/ServiceBusDuplicateDetectionComponents/ServiceBusDuplicateDetectionComponents.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

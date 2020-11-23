@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MassTransit;
 using MassTransit.ConsumeConfigurators;
 using MassTransit.Definition;
-using ServiceBusDuplicateDetectionConsumer.Components;
+using ServiceBusDuplicateDetectionComponents;
 
 namespace ServiceBusDuplicateDetectionConsumer.Consumers
 {
@@ -13,8 +13,10 @@ namespace ServiceBusDuplicateDetectionConsumer.Consumers
 
         public Task Consume(ConsumeContext<CustomerChanged> context)
         {
+            var messageId = context.Headers.Get<string>("MessageId");
             _counter++;
-            Console.WriteLine(_counter);
+            Console.WriteLine($"        Header MessageId:         {messageId}");
+            Console.WriteLine($"        MessageId:                {context.MessageId}");
             return Task.CompletedTask;
         }
     }
