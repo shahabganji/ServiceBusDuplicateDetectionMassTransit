@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AD310052-7D24-43F6-89A4-FFC1C41B4E40}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusDuplicateDetection.ConsoleSample", "src\ServiceBusDuplicateDetection.Console\ServiceBusDuplicateDetection.ConsoleSample.csproj", "{62E0EC68-007F-420F-B9A7-ECDE70A91D7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusDuplicateDetection.Consumer", "src\ServiceBusDuplicateDetection.Console\ServiceBusDuplicateDetection.Consumer.csproj", "{62E0EC68-007F-420F-B9A7-ECDE70A91D7C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusDuplicateDetection.Provisioning", "provisioning\ServiceBusDuplicateDetection.Provisioning.csproj", "{4E8697A4-B5A1-4D3D-8E79-F0CED16BD54A}"
 EndProject

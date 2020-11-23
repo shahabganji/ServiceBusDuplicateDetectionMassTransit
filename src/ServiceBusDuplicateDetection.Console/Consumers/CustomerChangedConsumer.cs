@@ -1,36 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using MassTransit;
 using MassTransit.ConsumeConfigurators;
 using MassTransit.Definition;
-using ServiceBusDuplicateDetection.ConsoleSample.Components;
+using ServiceBusDuplicateDetection.Consumer.Components;
 
-namespace ServiceBusDuplicateDetection.ConsoleSample.Consumers
+namespace ServiceBusDuplicateDetection.Consumer.Consumers
 {
-    class CustomerChangedConsumer : IConsumer<CustomerChanged>
+    public class CustomerChangedConsumer : IConsumer<CustomerChanged>
     {
-        private static int counter = 0;
+        private static int _counter = 0;
 
         public Task Consume(ConsumeContext<CustomerChanged> context)
         {
-            counter++;
+            _counter++;
+            Console.WriteLine(_counter);
             return Task.CompletedTask;
         }
     }
 
-    class CustomerChangedConsumerDefinition : ConsumerDefinition<CustomerChangedConsumer>
+    public class CustomerChangedConsumerDefinition : ConsumerDefinition<CustomerChangedConsumer>
     {
         public CustomerChangedConsumerDefinition()
         {
+            EndpointDefinition = new ConsumerEndpointDefinition<CustomerChangedConsumer>(
+                new EndpointSettings<IEndpointDefinition<CustomerChangedConsumer>>
+                {
+                    Name = $"sbs-sample",
+                    IsTemporary = false,
+                    PrefetchCount = 1,
+                    ConcurrentMessageLimit = 1
+                });
             this.ConcurrentMessageLimit = 1;
-            this.EndpointName = "sbs-sample";
         }
 
-        protected override void ConfigureConsumer(IReceiveEndpointConfigurator endpointConfigurator, IConsumerConfigurator<CustomerChangedConsumer> consumerConfigurator)
+        protected override void ConfigureConsumer(
+            IReceiveEndpointConfigurator endpointConfigurator,
+            IConsumerConfigurator<CustomerChangedConsumer> consumerConfigurator)
         {
-
+            consumerConfigurator.UseInMemoryOutbox();
         }
     }
 }

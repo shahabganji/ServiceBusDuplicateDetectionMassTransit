@@ -1,4 +1,3 @@
-using System;
 using Pulumi;
 using Pulumi.Azure.Core;
 using Pulumi.Azure.ServiceBus;

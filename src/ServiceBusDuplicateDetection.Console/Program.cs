@@ -1,45 +1,53 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MassTransit;
-using Microsoft.Extensions.DependencyInjection;
-using ServiceBusDuplicateDetection.ConsoleSample.Components;
-using ServiceBusDuplicateDetection.ConsoleSample.Consumers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Serilog;
+using ServiceBusDuplicateDetection.Consumer.Components;
+using ServiceBusDuplicateDetection.Consumer.Consumers;
 
-namespace ServiceBusDuplicateDetection.ConsoleSample
+namespace ServiceBusDuplicateDetection.Consumer
 {
     internal class Program
     {
         private static async Task Main(string[] args)
         {
-            var services = new ServiceCollection();
-            
-            services.AddMassTransit(x =>
-            {
-                x.UsingAzureServiceBus((context, cfg) =>
+            var host = CreateHostBuilder(args);
+            await host.Build().RunAsync();
+
+        }
+        
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            var host = Host.CreateDefaultBuilder(args)
+                .ConfigureLogging((context, builder) =>
                 {
-                    cfg.Host("connection-string");
-
-                    cfg.Message<CustomerChanged>(z =>
+                    var configuration = new ConfigurationBuilder()
+                        .Build();
+                    var logger = new LoggerConfiguration()
+                        .ReadFrom.Configuration(configuration)
+                        .CreateLogger();
+                    builder.AddSerilog(logger, dispose: true);
+                })
+                .ConfigureServices((hostContext, services) =>
+                {
+                    services.AddMassTransitHostedService();
+                    services.AddMassTransit(busConfigurator =>
                     {
-                        z.SetEntityName("sbt-sample");
+                        busConfigurator.AddConsumer<CustomerChangedConsumer>(typeof(CustomerChangedConsumerDefinition));
+                        
+                        busConfigurator.UsingAzureServiceBus((context, configurator) =>
+                        {
+                            configurator.ConfigureEndpoints(context);
+
+                            configurator.Host("");
+                            
+                            configurator.Message<CustomerChanged>(p => p.SetEntityName("sbt-sample"));
+                        });
                     });
-
-                    // cfg.ConfigurePublish(x => x.(context => {}));
-
                 });
 
-                x.AddConsumersFromNamespaceContaining<CustomerChangedConsumer>();
-            });
-
-            var provider = new DefaultServiceProviderFactory().CreateServiceProvider(services);
-            var publisher = provider.GetRequiredService<IPublishEndpoint>();
-
-
-            await publisher.Publish<CustomerChanged>(new
-            {
-                Id = Guid.NewGuid(),
-                Name = "Shahab"
-            });
+            return host;
         }
     }
 }
