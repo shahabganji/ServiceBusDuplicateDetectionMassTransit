@@ -1,0 +1,3 @@
+name: service-bus-duplicate-detection
+runtime: dotnet
+description: The provisioning for the service bus duplicate detection sample
